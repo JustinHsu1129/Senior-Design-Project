@@ -1,0 +1,505 @@
+Analysis & Synthesis report for Lab1_Part2
+Fri Jan 09 17:10:42 2026
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jan 09 17:10:42 2026           ;
+; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Standard Edition ;
+; Revision Name                   ; Lab1_Part2                                      ;
+; Top-level Entity Name           ; Lab1_Part2                                      ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 95                                              ;
+; Total pins                      ; 168                                             ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; Lab1_Part2         ; Lab1_Part2         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; FIFO_Input.txt                   ; yes             ; User File                    ; C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/FIFO_Input.txt ;         ;
+; lab1_part2.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v   ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 53       ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 79       ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 11       ;
+;     -- 5 input functions                    ; 1        ;
+;     -- 4 input functions                    ; 0        ;
+;     -- <=3 input functions                  ; 67       ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 95       ;
+;                                             ;          ;
+; I/O pins                                    ; 168      ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; slow_clk ;
+; Maximum fan-out                             ; 70       ;
+; Total fan-out                               ; 688      ;
+; Average fan-out                             ; 1.29     ;
++---------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; |Lab1_Part2                ; 79 (36)             ; 95 (58)                   ; 0                 ; 0          ; 168  ; 0            ; |Lab1_Part2                ; Lab1_Part2  ; work         ;
+;    |InputFeeder:u0|        ; 43 (43)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab1_Part2|InputFeeder:u0 ; InputFeeder ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                         ;
++----------------------------------------+-----------------------------------+
+; Register name                          ; Reason for Removal                ;
++----------------------------------------+-----------------------------------+
+; InputFeeder:u0|out[2]                  ; Merged with InputFeeder:u0|out[1] ;
+; InputFeeder:u0|out[5]                  ; Merged with InputFeeder:u0|out[4] ;
+; hex0_reg[4]                            ; Merged with hex0_reg[5]           ;
+; hex0_reg[1]                            ; Merged with hex0_reg[2]           ;
+; hex1_reg[4]                            ; Merged with hex1_reg[5]           ;
+; hex1_reg[1]                            ; Merged with hex1_reg[2]           ;
+; hex2_reg[5]                            ; Merged with hex2_reg[4]           ;
+; hex3_reg[5]                            ; Merged with hex3_reg[4]           ;
+; hex4_reg[5]                            ; Merged with hex4_reg[4]           ;
+; hex2_reg[1]                            ; Merged with hex2_reg[2]           ;
+; hex3_reg[2]                            ; Merged with hex3_reg[1]           ;
+; hex4_reg[2]                            ; Merged with hex4_reg[1]           ;
+; Total Number of Removed Registers = 12 ;                                   ;
++----------------------------------------+-----------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 95    ;
+; Number of registers using Synchronous Clear  ; 57    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; InputFeeder:u0|out[0]                  ; 1       ;
+; InputFeeder:u0|out[1]                  ; 1       ;
+; InputFeeder:u0|out[3]                  ; 1       ;
+; InputFeeder:u0|out[4]                  ; 1       ;
+; InputFeeder:u0|out[6]                  ; 1       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 95                          ;
+;     ENA               ; 5                           ;
+;     SCLR              ; 57                          ;
+;     plain             ; 33                          ;
+; arriav_io_obuf        ; 24                          ;
+; arriav_lcell_comb     ; 80                          ;
+;     arith             ; 57                          ;
+;         1 data inputs ; 57                          ;
+;     normal            ; 23                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 4                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 11                          ;
+; boundary_port         ; 168                         ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.08                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
+    Info: Processing started: Fri Jan 09 17:10:35 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1_Part2 -c Lab1_Part2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Warning (12125): Using design file lab1_part2.v, which is not specified as a design file for the current project, but contains definitions for 2 design units and 2 entities in project
+    Info (12023): Found entity 1: InputFeeder File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 1
+    Info (12023): Found entity 2: Lab1_Part2 File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 44
+Info (12127): Elaborating entity "Lab1_Part2" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at lab1_part2.v(154): truncated value with size 32 to match size of target (25) File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 154
+Warning (10034): Output port "DRAM_ADDR" at lab1_part2.v(67) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+Warning (10034): Output port "DRAM_BA" at lab1_part2.v(68) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 68
+Warning (10034): Output port "LEDR" at lab1_part2.v(99) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+Warning (10034): Output port "VGA_B" at lab1_part2.v(119) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+Warning (10034): Output port "VGA_G" at lab1_part2.v(121) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+Warning (10034): Output port "VGA_R" at lab1_part2.v(123) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+Warning (10034): Output port "ADC_CONVST" at lab1_part2.v(47) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 47
+Warning (10034): Output port "ADC_DIN" at lab1_part2.v(48) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 48
+Warning (10034): Output port "ADC_SCLK" at lab1_part2.v(50) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 50
+Warning (10034): Output port "AUD_DACDAT" at lab1_part2.v(56) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 56
+Warning (10034): Output port "AUD_XCK" at lab1_part2.v(58) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 58
+Warning (10034): Output port "DRAM_CAS_N" at lab1_part2.v(69) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 69
+Warning (10034): Output port "DRAM_CKE" at lab1_part2.v(70) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 70
+Warning (10034): Output port "DRAM_CLK" at lab1_part2.v(71) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 71
+Warning (10034): Output port "DRAM_CS_N" at lab1_part2.v(72) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 72
+Warning (10034): Output port "DRAM_LDQM" at lab1_part2.v(74) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 74
+Warning (10034): Output port "DRAM_RAS_N" at lab1_part2.v(75) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 75
+Warning (10034): Output port "DRAM_UDQM" at lab1_part2.v(76) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 76
+Warning (10034): Output port "DRAM_WE_N" at lab1_part2.v(77) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 77
+Warning (10034): Output port "FPGA_I2C_SCLK" at lab1_part2.v(80) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 80
+Warning (10034): Output port "IRDA_TXD" at lab1_part2.v(93) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 93
+Warning (10034): Output port "TD_RESET_N" at lab1_part2.v(114) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 114
+Warning (10034): Output port "VGA_BLANK_N" at lab1_part2.v(118) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 118
+Warning (10034): Output port "VGA_CLK" at lab1_part2.v(120) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 120
+Warning (10034): Output port "VGA_HS" at lab1_part2.v(122) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 122
+Warning (10034): Output port "VGA_SYNC_N" at lab1_part2.v(124) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 124
+Warning (10034): Output port "VGA_VS" at lab1_part2.v(126) has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 126
+Info (12128): Elaborating entity "InputFeeder" for hierarchy "InputFeeder:u0" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 160
+Warning (10030): Net "inputBuffer.data_a" at lab1_part2.v(8) has no driver or initial value, using a default initial value '0' File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 8
+Warning (10030): Net "inputBuffer.waddr_a" at lab1_part2.v(8) has no driver or initial value, using a default initial value '0' File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 8
+Warning (10030): Net "inputBuffer.we_a" at lab1_part2.v(8) has no driver or initial value, using a default initial value '0' File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 8
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "InputFeeder:u0|inputBuffer" is uninferred due to inappropriate RAM size File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 8
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (6) in the Memory Initialization File "C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/db/Lab1_Part2.ram0_InputFeeder_43fb2b5b.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 54
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 55
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 57
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 73
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 81
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 102
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 103
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 104
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 105
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 47
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 48
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 50
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 56
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 58
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 67
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 68
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 68
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 69
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 70
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 71
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 72
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 74
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 75
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 76
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 77
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 80
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 93
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 99
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 114
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 118
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 119
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 120
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 121
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 122
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 123
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 124
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 126
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/Lab1_Part2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 31 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_Dout" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 49
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 53
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 61
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 62
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 63
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 92
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 96
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 96
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 96
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 96
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 108
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 111
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 112
+    Warning (15610): No output dependent on input pin "TD_HS" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 113
+    Warning (15610): No output dependent on input pin "TD_VS" File: C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/lab1_part2.v Line: 115
+Info (21057): Implemented 274 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 112 output pins
+    Info (21060): Implemented 24 bidirectional pins
+    Info (21061): Implemented 106 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 162 warnings
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Fri Jan 09 17:10:42 2026
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Justin/Documents/School/Senior Design/Lab 1/Part 2/Lab1_Part2.map.smsg.
+
+

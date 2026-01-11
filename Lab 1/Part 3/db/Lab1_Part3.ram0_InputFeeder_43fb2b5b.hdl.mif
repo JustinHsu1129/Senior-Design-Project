@@ -1,0 +1,17 @@
+-- begin_signature
+-- InputFeeder
+-- end_signature
+WIDTH=7;
+DEPTH=6;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	5 :	1111111;
+	4 :	1000000;
+	3 :	1000111;
+	2 :	1000111;
+	1 :	0000110;
+	0 :	0001001;
+END;
